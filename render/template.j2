@@ -1,0 +1,16 @@
+---
+id: migration-report
+title: Migration Report
+---
+
+## Processes with errors
+
+| Process | Message |
+| ----- | ----- |
+{%- for item in value -%}
+  {%- if item.level == "error" -%}
+    {%- if item.message == "Issue(s) found during TI Process migration." %}
+| {{item.process}} | {{item.message}} |
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
