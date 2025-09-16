@@ -28,45 +28,83 @@
     white-space: nowrap;
   }
 
-  /* Callout blocks */
-  .tip, .warning, .note {
-    border-left: 4px solid;
-    padding: 1em;
-    margin: 1em 0;
+  /* Shared alert block styles */
+  .note,
+  .tip,
+  .important,
+  .warning,
+  .caution {
+    border: 1px solid #d0d7de;
+    border-left: 4px solid #d0d7de;
+    padding: 0.5em 0.75em;
+    margin: 0.75em 0;
     border-radius: 5px;
   }
 
-  .tip {
-    background-color: #e6f4ea;
-    border-color: #2e7d32;
-    color: #2e7d32;
-  }
-
-  .tip::before {
-    content: "💡 TIP";
-    font-weight: bold;
-  }
-
-  .warning {
-    background-color: #fff3cd;
-    border-color: #856404;
-    color: #856404;
-  }
-
-  .warning::before {
-    content: "⚠️ WARNING";
-    font-weight: bold;
+  /* Reset paragraph spacing inside alerts */
+  .note p,
+  .tip p,
+  .important p,
+  .warning p,
+  .caution p {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
   }
 
   .note {
-    background-color: #e7f3fe;
-    border-color: #1c7ed6;
-    color: #1c7ed6;
+    background-color: #f6f8fa;
+    border-color: #0969da;
   }
 
   .note::before {
-    content: "💬 NOTE";
+    content: "ℹ️ Note";
     font-weight: bold;
+    margin-right: 0.5em;
   }
+
+  .tip {
+    background-color: #f0fff4;
+    border-color: #1a7f37;
+  }
+
+  .tip::before {
+    content: "💡 Tip";
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+
+  .important {
+    background-color: #fff5f5;
+    border-color: #8250df;
+  }
+
+  .important::before {
+    content: "❗ Important";
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+
+  .warning {
+    background-color: #fff8e1;
+    border-color: #9a6700;
+  }
+
+  .warning::before {
+    content: "⚠️ Warning";
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+
+  .caution {
+    background-color: #fff0f0;
+    border-color: #cf222e;
+  }
+
+  .caution::before {
+    content: "⛔ Caution";
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+
 </style>
 
